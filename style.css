@@ -133,7 +133,7 @@ section{
     line-height: 1.8;
 } */
 
-.features{
+.features , .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -148,8 +148,6 @@ section{
     align-items: center;
 
 }
-
-
 .features .box-container .box{
     margin-top: 6px;
     margin-bottom: 6px;
