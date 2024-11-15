@@ -269,7 +269,11 @@ section{
     overflow: hidden;  /* Hide any overflow if needed */
 }
 
-
+.footer{
+    background-color: #130f40;
+    height: 500px;
+    
+}
 
 /* 
 @media (max-width:991px){
