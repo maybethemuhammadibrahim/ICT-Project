@@ -133,7 +133,13 @@ section{
     line-height: 1.8;
 }
 
-
+.features{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .features .box-container{
     display: flex;
     flex-direction: row;
@@ -142,6 +148,7 @@ section{
     align-items: center;
 
 }
+
 
 .features .box-container .box{
     padding:3rem 2rem;
