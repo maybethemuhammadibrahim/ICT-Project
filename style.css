@@ -151,9 +151,13 @@ section{
 
 
 .features .box-container .box{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    margin-left: 6px;
     padding:3rem 2rem;
     height: 450px;
-    width: 350px;
+    width: 260px;
     background: #fff;
     text-align: center;
     
