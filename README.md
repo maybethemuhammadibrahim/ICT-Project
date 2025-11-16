@@ -10,15 +10,9 @@ A clean, responsive grocery store website built with pure HTML and CSS - no Java
 
 ## Features
 - 🛒 Full product catalog with categories
-- 📱 Mobile-responsive design
 - 🎨 Modern, clean interface
 - ⚡ Fast loading (no JS dependencies)
 - ♿ Accessible navigation
-
-## Quick Start
-1. Clone this repository
-2. Open `index.html` in your browser
-3. That's it! No build process or dependencies
 
 ## Screenshots
 *(Add your website screenshots here)*
