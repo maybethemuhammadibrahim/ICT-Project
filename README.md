@@ -1,12 +1,12 @@
 # Grocery Store Website
 
 A clean, responsive grocery store website built with pure HTML and CSS - no JavaScript required.
-**<div align="center">
+<div align="center">
 
-[![Live Website](https://img.shields.io/badge/🌐_Grocery-Website)]([https://maybethemuhammadibrahim.github.io](https://grocerystorewebsite-olive.vercel.app/))
+[![Live Website](https://img.shields.io/badge/🌐_Grocery-Website-8A2BE2)](https://grocerystorewebsite-olive.vercel.app/)
 
 </div>
-**
+
 
 ## Features
 - 🛒 Full product catalog with categories
