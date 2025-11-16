@@ -37,11 +37,11 @@ A clean, responsive grocery store website built with pure HTML and CSS - no Java
 grocery-store/
 ├── index.html          # Homepage
 ├── products.html       # Product catalog
-├── about.html          # About page
-├── contact.html        # Contact form
-├── styles/
-│   └── style.css       # Main stylesheet
-├── images/             # Product images
+├── categories.html     # Product categories
+├── featres.html        # Brand Features
+├── cart.html           # Cart
+├── style.css           # Main stylesheet
+├── image/              # Product images
 └── README.md
 ```
 
