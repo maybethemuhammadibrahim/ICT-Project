@@ -18,7 +18,7 @@ A clean, responsive grocery store website built with pure HTML and CSS - no Java
 *(Add your website screenshots here)*
 
 **Home Page:**
-<!-- ![Homepage](screenshots/home.png) -->
+![Homepage](screenshots/home.png)
 
 **Product Catalog:**
 <!-- ![Products](screenshots/products.png) -->
