@@ -5,26 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
+    
+    <style>
+      /* --- FIXES FOR BANNER & BRANDS --- */
+
+      /* 1. Make Banner Visible on Desktop */
+      .home {
+        min-height: 60vh; /* Gives the section height so the image shows */
+        background: url('image/banner3-min.png') no-repeat center; /* Ensure path is correct */
+        background-size: cover;
+        width: 100%;
+        margin-top: 6rem; /* Clear the fixed header */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 2. Remove Banner on Mobile Only */
+      @media (max-width: 768px) {
+        .home {
+          display: none !important; /* Hides the section completely on mobile */
+        }
+        
+        /* Add margin to the next section so it doesn't hide behind header */
+        .categories {
+          margin-top: 8rem; 
+        }
+      }
+
+      /* 3. Center Brand Logos */
+      .brands .box-container .box-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .brands .box-container .box-brand img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
 
   <body>
     <header class="header">
-      <a href="index.html" class="logo">Grocery Store</a>
+      <a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i> Grocery Store</a>
+      
       <nav class="navbar">
         <a href="index.html">home</a>
         <a href="features.html">features</a>
         <a href="categories.html">categories</a>
         <a href="cart.html">cart</a>
       </nav>
+
+      <div class="fas fa-bars" id="menu-btn"></div>
     </header>
 
-    <section class="home" id="home"></section>
+    <section class="home" id="home">
+        </section>
 
     <section class="categories" id="categories">
       <h1 class="heading">product <span>categories</span></h1>
+      
       <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Search..." />
+        <input type="text" class="search-bar" placeholder="Search products..." />
       </div>
 
       <div class="box-container">
@@ -56,48 +103,19 @@
           <a href="products.html" class="btn">shop now</a>
         </div>
       </div>
-      <a href="categories.html" class="btn">See More</a>
+      
+      <div style="text-align: center; margin-top: 2rem;">
+          <a href="categories.html" class="btn">See More Categories</a>
+      </div>
     </section>
 
     <section class="brands" id="brands">
       <h1 class="heading">Featured <span>Brands</span></h1>
       <div class="box-container">
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
-        <div class="box-brand">
-          <img
-            src="https://placeholder.pics/svg/300x300/DEDEDE/555555/Logo%20"
-            alt="Picture Of A Brand"
-          />
-        </div>
+        <div class="box-brand"><img src="https://via.placeholder.com/150?text=Brand+1" alt="Brand"></div>
+        <div class="box-brand"><img src="https://via.placeholder.com/150?text=Brand+2" alt="Brand"></div>
+        <div class="box-brand"><img src="https://via.placeholder.com/150?text=Brand+3" alt="Brand"></div>
+        <div class="box-brand"><img src="https://via.placeholder.com/150?text=Brand+4" alt="Brand"></div>
       </div>
     </section>
 
@@ -106,27 +124,42 @@
       <div class="box-container">
         <div class="box">
           <img src="image/organic1.jpg" alt="Fresh Fruits" />
-          <h3>fresh and organic</h3>
-          <p>Fresh vegetables and fruits in cheap price.</p>
+          <h3>Fresh and Organic</h3>
+          <p>Fresh vegetables and fruits at cheap prices.</p>
         </div>
 
         <div class="box">
           <img src="image/delivery.jpg" alt="Delivery Man" />
-          <h3>free delivery</h3>
-          <p>We always do fast delivery on our customers.</p>
+          <h3>Free Delivery</h3>
+          <p>We always do fast delivery for our customers.</p>
         </div>
 
         <div class="box">
           <img src="image/payment.png" alt="Credit Card" />
-          <h3>easy payments</h3>
-          <p>It is very easy to pay on our website, you can pay easily.</p>
+          <h3>Easy Payments</h3>
+          <p>Secure and diverse payment options.</p>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      Copyright © 2024 GROCERY STORE WEBSITE . All Rights Reserved.
+      Copyright © 2024 GROCERY STORE WEBSITE. All Rights Reserved.
       <a href="about.html">About the Developers</a>
     </footer>
+
+    <script>
+        let navbar = document.querySelector('.navbar');
+        let menuBtn = document.querySelector('#menu-btn');
+
+        menuBtn.onclick = () =>{
+            navbar.classList.toggle('active');
+            menuBtn.classList.toggle('fa-times'); // Changes icon to 'X'
+        }
+
+        window.onscroll = () =>{
+            navbar.classList.remove('active');
+            menuBtn.classList.remove('fa-times');
+        }
+    </script>
   </body>
 </html>

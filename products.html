@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Store</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
 
   <body>
     <header class="header">
-      <a href="index.html" class="logo">Grocery Store </a>
-      <nav class="navbar">
-        <a href="index.html">home</a>
-        <a href="features.html">features</a>
-        <a href="categories.html">categories</a>
-        <a href="cart.html">cart</a>
-      </nav>
-    </header>
+  <a href="index.html" class="logo">Grocery Store</a>
+  <nav class="navbar">
+     </nav>
+  <div class="fas fa-bars" id="menu-btn"></div> </header>
     <section class="categories" id="categories" style="margin-top: 60px">
       <h1 class="heading">products</h1>
       <div class="search-container">
@@ -43,5 +40,19 @@
       Copyright © 2024 GROCERY STORE WEBSITE . All Rights Reserved.
       <a href="about.html">About the Developers</a>
     </footer>
+    <script>
+        let navbar = document.querySelector('.navbar');
+        let menuBtn = document.querySelector('#menu-btn');
+
+        menuBtn.onclick = () =>{
+            navbar.classList.toggle('active');
+            menuBtn.classList.toggle('fa-times'); // Changes icon to 'X'
+        }
+
+        window.onscroll = () =>{
+            navbar.classList.remove('active');
+            menuBtn.classList.remove('fa-times');
+        }
+    </script>
   </body>
 </html>
